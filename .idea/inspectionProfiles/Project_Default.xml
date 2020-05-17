@@ -1,0 +1,30 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="simpy" />
+          <option value="PetrolStation.FUEL_TANK_LEVEL" />
+          <option value="PetrolStation.THRESHOLD" />
+          <option value="PetrolStation.T_INTER" />
+          <option value="PetrolStation.car" />
+          <option value="PetrolStation.TANK_TRUCK_TIME" />
+          <option value="PetrolStation.tank_truck" />
+          <option value="PetrolStation.REFUELING_SPEED" />
+          <option value="PetrolStation.FUEL_TANK_SIZE" />
+          <option value="PetrolStation.RANDOM_SEED" />
+          <option value="PetrolStation.gas_station_control" />
+          <option value="PetrolStation.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

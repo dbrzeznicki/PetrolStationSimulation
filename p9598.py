@@ -35,6 +35,7 @@ FUEL_TANK_LEVEL = [5, 25]  # Min/max levels of fuel tanks (in liters)
 T_INTER = [10, 30]  # Create a car every [min, max] seconds
 
 TEXT = ""
+AMOUNT_OF_FUEL_REFUELED = 0
 
 
 def car(name, env, gas_station, fuel_pump):
@@ -46,6 +47,8 @@ def car(name, env, gas_station, fuel_pump):
 
     """
     fuel_tank_level = random.randint(*FUEL_TANK_LEVEL)
+    global AMOUNT_OF_FUEL_REFUELED
+    AMOUNT_OF_FUEL_REFUELED += fuel_tank_level
     global TEXT
     TEXT += '%s arriving at gas station at %.1f \n' % (name, env.now)
     with gas_station.request() as req:
@@ -94,7 +97,7 @@ def car_generator(env, gas_station, fuel_pump):
         env.process(car('Car %d' % i, env, gas_station, fuel_pump))
 
 
-def start():
+def start9598():
     # Setup and start the simulation
     global TEXT
     TEXT = 'Gas Station refuelling\n'

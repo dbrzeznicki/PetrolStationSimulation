@@ -6,6 +6,7 @@ import Gas
 
 
 def showPlot():
+    plt.clf()
     plt.plot(Diesel.Plot2SimTime, Diesel.Plot2Amount)
     plt.plot(Gas.Plot2SimTime, Gas.Plot2Amount)
     plt.plot(p9598.Plot2SimTime, p9598.Plot2Amount)

@@ -16,17 +16,18 @@ import NumberOfCarTimeChart
 import AmountTimeChart
 import TankTruckArrivingChart
 
+
 app = QApplication(sys.argv)
 
-textBoxTableDiesel = [QLineEdit("2000"), QLineEdit("10"), QLineEdit("2"), QLineEdit("50"),
+textBoxTableDiesel = [QLineEdit("2000"), QLineEdit("10"), QLineEdit("2"),
                       QLineEdit("2"), QLineEdit("30"), QLineEdit("5"), QLineEdit("25"), QLineEdit("10"),
                       QLineEdit("30")]
 
-textBoxTable9598 = [QLineEdit("2000"), QLineEdit("10"), QLineEdit("2"), QLineEdit("50"),
+textBoxTable9598 = [QLineEdit("2000"), QLineEdit("10"), QLineEdit("2"),
                     QLineEdit("2"), QLineEdit("30"), QLineEdit("5"), QLineEdit("25"), QLineEdit("10"),
                     QLineEdit("30")]
 
-textBoxTableGas = [QLineEdit("2000"), QLineEdit("10"), QLineEdit("2"), QLineEdit("50"),
+textBoxTableGas = [QLineEdit("2000"), QLineEdit("10"), QLineEdit("2"),
                    QLineEdit("2"), QLineEdit("30"), QLineEdit("5"), QLineEdit("25"), QLineEdit("10"),
                    QLineEdit("30")]
 
@@ -61,11 +62,10 @@ def set_diesel_properties():
     Diesel.GAS_STATION_SIZE = int(textBoxTableDiesel[0].text())
     Diesel.THRESHOLD = int(textBoxTableDiesel[1].text())
     Diesel.NUMBER_OF_PUMP = int(textBoxTableDiesel[2].text())
-    Diesel.FUEL_TANK_SIZE = int(textBoxTableDiesel[3].text())
-    Diesel.REFUELING_SPEED = int(textBoxTableDiesel[4].text())
-    Diesel.TANK_TRUCK_TIME = int(textBoxTableDiesel[5].text())
-    Diesel.FUEL_TANK_LEVEL = [int(textBoxTableDiesel[6].text()), int(textBoxTableDiesel[7].text())]
-    Diesel.T_INTER = [int(textBoxTableDiesel[8].text()), int(textBoxTableDiesel[9].text())]
+    Diesel.REFUELING_SPEED = int(textBoxTableDiesel[3].text())
+    Diesel.TANK_TRUCK_TIME = int(textBoxTableDiesel[4].text())
+    Diesel.FUEL_TANK_LEVEL = [int(textBoxTableDiesel[5].text()), int(textBoxTableDiesel[6].text())]
+    Diesel.T_INTER = [int(textBoxTableDiesel[7].text()), int(textBoxTableDiesel[8].text())]
     if ComboBoxProbability.currentIndex() == 0:
         Diesel.CHOICE = 0
     elif ComboBoxProbability.currentIndex() == 1:
@@ -80,11 +80,10 @@ def set_9598_properties():
     p9598.GAS_STATION_SIZE = int(textBoxTable9598[0].text())
     p9598.THRESHOLD = int(textBoxTable9598[1].text())
     p9598.NUMBER_OF_PUMP = int(textBoxTable9598[2].text())
-    p9598.FUEL_TANK_SIZE = int(textBoxTable9598[3].text())
-    p9598.REFUELING_SPEED = int(textBoxTable9598[4].text())
-    p9598.TANK_TRUCK_TIME = int(textBoxTable9598[5].text())
-    p9598.FUEL_TANK_LEVEL = [int(textBoxTable9598[6].text()), int(textBoxTable9598[7].text())]
-    p9598.T_INTER = [int(textBoxTable9598[8].text()), int(textBoxTable9598[9].text())]
+    p9598.REFUELING_SPEED = int(textBoxTable9598[3].text())
+    p9598.TANK_TRUCK_TIME = int(textBoxTable9598[4].text())
+    p9598.FUEL_TANK_LEVEL = [int(textBoxTable9598[5].text()), int(textBoxTable9598[6].text())]
+    p9598.T_INTER = [int(textBoxTable9598[7].text()), int(textBoxTable9598[8].text())]
     if ComboBoxProbability.currentIndex() == 0:
         p9598.CHOICE = 0
     elif ComboBoxProbability.currentIndex() == 1:
@@ -98,11 +97,10 @@ def set_gas_properties():
     Gas.GAS_STATION_SIZE = int(textBoxTableGas[0].text())
     Gas.THRESHOLD = int(textBoxTableGas[1].text())
     Gas.NUMBER_OF_PUMP = int(textBoxTableGas[2].text())
-    Gas.FUEL_TANK_SIZE = int(textBoxTableGas[3].text())
-    Gas.REFUELING_SPEED = int(textBoxTableGas[4].text())
-    Gas.TANK_TRUCK_TIME = int(textBoxTableGas[5].text())
-    Gas.FUEL_TANK_LEVEL = [int(textBoxTableGas[6].text()), int(textBoxTableGas[7].text())]
-    Gas.T_INTER = [int(textBoxTableGas[8].text()), int(textBoxTableGas[9].text())]
+    Gas.REFUELING_SPEED = int(textBoxTableGas[3].text())
+    Gas.TANK_TRUCK_TIME = int(textBoxTableGas[4].text())
+    Gas.FUEL_TANK_LEVEL = [int(textBoxTableGas[5].text()), int(textBoxTableGas[6].text())]
+    Gas.T_INTER = [int(textBoxTableGas[7].text()), int(textBoxTableGas[8].text())]
     if ComboBoxProbability.currentIndex() == 0:
         Gas.CHOICE = 0
     elif ComboBoxProbability.currentIndex() == 1:
@@ -126,13 +124,12 @@ def set_form_diesel():
     formDiesel.addRow("GAS_STATION_SIZE", textBoxTableDiesel[0])
     formDiesel.addRow("THRESHOLD [%]", textBoxTableDiesel[1])
     formDiesel.addRow("NUMBER_OF_PUMP", textBoxTableDiesel[2])
-    formDiesel.addRow("FUEL_TANK_SIZE", textBoxTableDiesel[3])
+    formDiesel.addRow("TANK_TRUCK_TIME", textBoxTableDiesel[3])
     formDiesel.addRow("TANK_TRUCK_TIME", textBoxTableDiesel[4])
-    formDiesel.addRow("TANK_TRUCK_TIME", textBoxTableDiesel[5])
-    formDiesel.addRow("FUEL_TANK_LEVEL_MIN", textBoxTableDiesel[6])
-    formDiesel.addRow("FUEL_TANK_LEVEL_MAX", textBoxTableDiesel[7])
-    formDiesel.addRow("T_INTER_MIN", textBoxTableDiesel[8])
-    formDiesel.addRow("T_INTER_MAX", textBoxTableDiesel[9])
+    formDiesel.addRow("FUEL_TANK_LEVEL_MIN", textBoxTableDiesel[5])
+    formDiesel.addRow("FUEL_TANK_LEVEL_MAX", textBoxTableDiesel[6])
+    formDiesel.addRow("T_INTER_MIN", textBoxTableDiesel[7])
+    formDiesel.addRow("T_INTER_MAX", textBoxTableDiesel[8])
     GroupBoxFormDiesel.setLayout(formDiesel)
 
 
@@ -141,13 +138,12 @@ def set_form_9598():
     form9598.addRow("GAS_STATION_SIZE", textBoxTable9598[0])
     form9598.addRow("THRESHOLD [%]", textBoxTable9598[1])
     form9598.addRow("NUMBER_OF_PUMP", textBoxTable9598[2])
-    form9598.addRow("FUEL_TANK_SIZE", textBoxTable9598[3])
+    form9598.addRow("TANK_TRUCK_TIME", textBoxTable9598[3])
     form9598.addRow("TANK_TRUCK_TIME", textBoxTable9598[4])
-    form9598.addRow("TANK_TRUCK_TIME", textBoxTable9598[5])
-    form9598.addRow("FUEL_TANK_LEVEL_MIN", textBoxTable9598[6])
-    form9598.addRow("FUEL_TANK_LEVEL_MAX", textBoxTable9598[7])
-    form9598.addRow("T_INTER_MIN", textBoxTable9598[8])
-    form9598.addRow("T_INTER_MAX", textBoxTable9598[9])
+    form9598.addRow("FUEL_TANK_LEVEL_MIN", textBoxTable9598[5])
+    form9598.addRow("FUEL_TANK_LEVEL_MAX", textBoxTable9598[6])
+    form9598.addRow("T_INTER_MIN", textBoxTable9598[7])
+    form9598.addRow("T_INTER_MAX", textBoxTable9598[8])
     GroupBoxForm9598.setLayout(form9598)
 
 
@@ -156,13 +152,12 @@ def set_form_gas():
     formGas.addRow("GAS_STATION_SIZE", textBoxTableGas[0])
     formGas.addRow("THRESHOLD [%]", textBoxTableGas[1])
     formGas.addRow("NUMBER_OF_PUMP", textBoxTableGas[2])
-    formGas.addRow("FUEL_TANK_SIZE", textBoxTableGas[3])
+    formGas.addRow("TANK_TRUCK_TIME", textBoxTableGas[3])
     formGas.addRow("TANK_TRUCK_TIME", textBoxTableGas[4])
-    formGas.addRow("TANK_TRUCK_TIME", textBoxTableGas[5])
-    formGas.addRow("FUEL_TANK_LEVEL_MIN", textBoxTableGas[6])
-    formGas.addRow("FUEL_TANK_LEVEL_MAX", textBoxTableGas[7])
-    formGas.addRow("T_INTER_MIN", textBoxTableGas[8])
-    formGas.addRow("T_INTER_MAX", textBoxTableGas[9])
+    formGas.addRow("FUEL_TANK_LEVEL_MIN", textBoxTableGas[5])
+    formGas.addRow("FUEL_TANK_LEVEL_MAX", textBoxTableGas[6])
+    formGas.addRow("T_INTER_MIN", textBoxTableGas[7])
+    formGas.addRow("T_INTER_MAX", textBoxTableGas[8])
     GroupBoxFormGas.setLayout(formGas)
 
 

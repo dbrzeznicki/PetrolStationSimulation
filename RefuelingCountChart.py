@@ -6,7 +6,7 @@ import Gas
 
 
 def showPlot():
-
+    plt.clf()
     plt.bar('Gas', Gas.AMOUNT_OF_FUEL_REFUELED, label='Gas')
     plt.bar('9598', p9598.AMOUNT_OF_FUEL_REFUELED, label='9598')
     plt.bar('Diesel', Diesel.AMOUNT_OF_FUEL_REFUELED, label='Diesel')

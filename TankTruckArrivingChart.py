@@ -6,7 +6,7 @@ import Gas
 
 
 def showPlot():
-
+    plt.clf()
     plt.bar('Gas', Gas.TANK_TRUCK_COUNT, label='Gas')
     plt.bar('9598', p9598.TANK_TRUCK_COUNT, label='9598')
     plt.bar('Diesel', Diesel.TANK_TRUCK_COUNT, label='Diesel')
@@ -15,6 +15,6 @@ def showPlot():
     plt.ylabel('Liczba dostaw paliwa')
     plt.title('Liczba dostaw danego paliwa')
     plt.show()
-    Diesel.AMOUNT_OF_FUEL_REFUELED = 0
-    p9598.AMOUNT_OF_FUEL_REFUELED = 0
-    Gas.AMOUNT_OF_FUEL_REFUELED = 0
+    Diesel.TANK_TRUCK_COUNT = 0
+    p9598.TANK_TRUCK_COUNT = 0
+    Gas.TANK_TRUCK_COUNT = 0
